@@ -7,9 +7,13 @@ Target Hardware: Netis Wireless Router (Internal IP: 192.168.1.1)
 # 1. Objective
 To perform a comprehensive security audit of the home gateway, verify external "stealth" status, and identify any unnecessary internal services that could increase the local attack surface.
 # 2. Phase 1: External Auditing & False Positive Analysis
-During initial testing using a mobile hotspot and nmap, two ports (21,5060) appeared as "Open." Recognizing that cellular networks often use transparent proxies or CGNAT, I sought to verify these results using a neutral third-party source.
+During initial testing using a mobile hotspot and nmap, two ports (21,5060) appeared as "Open." Recognizing that cellular networks often use transparent proxies or CGNAT
+
+![Nmap scan](/Routers-security-reports/Netis%20WF2409E/images/public_scan_with_hotspot.png)
+
+I thought to verify these results using a neutral third-party source.
 Tools Used: GRC ShieldsUP!
-Result: [INSERT HACKERTARGET SCREENSHOT HERE]
+
 Analysis: GRC shieldsUP confirmed that the two ports are Filtered.
 Conclusion: The initial "Open" ports were False Positives caused by the mobile carrier's network architecture. The router is correctly dropping all unsolicited external traffic (Stealth Mode).
 # 3. Phase 2: Internal Service Discovery
