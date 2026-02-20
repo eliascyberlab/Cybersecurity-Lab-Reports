@@ -35,7 +35,10 @@ Findings:
 Port 53 (TCP/UDP): DNS Domain service is active for local name resolution.
 Port 80 (TCP): HTTP Web Management interface is active.
 # 4. Risk Assessment & Hardening
-Management Interface: While Port 80 is open internally, it is Filtered externally(using  Nmap Port Scanner at HACKERTARGET.COM) . I verified that a strong, non-default administrative password is required to access this interface.
+Management Interface: While Port 80 is open internally, i used another neutral third-party source to check if it is Filtered externally.
+
+Tools used: Nmap online port scanner at hackertarget.com
+
 Backdoor Check: I specifically checked for known Netis backdoors (e.g., UDP 53413). The scan confirmed this port is not active, indicating a more secure firmware version or configuration.
 UDP Stealth: The 16-minute scan duration confirms the router's firewall is effectively "ignoring" probes rather than rejecting them, making reconnaissance more difficult for a local attacker.
 # 5. Final Conclusion
