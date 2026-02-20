@@ -1,4 +1,5 @@
 Lab Report: Home Router Security Audit & Verification
+
 Analyst: Elias Zgheib
 
 Date: February 14, 2026
