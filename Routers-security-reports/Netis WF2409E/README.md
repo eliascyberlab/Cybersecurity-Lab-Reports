@@ -14,6 +14,8 @@ During initial testing using a mobile hotspot and nmap, two ports (21,5060) appe
 I thought to verify these results using a neutral third-party source.
 Tools Used: GRC ShieldsUP!
 
+![GRC port 21](/Routers-security-reports/Netis%20WF2409E/images/port21_grc_passed.png)
+
 Analysis: GRC shieldsUP confirmed that the two ports are Filtered.
 Conclusion: The initial "Open" ports were False Positives caused by the mobile carrier's network architecture. The router is correctly dropping all unsolicited external traffic (Stealth Mode).
 # 3. Phase 2: Internal Service Discovery
