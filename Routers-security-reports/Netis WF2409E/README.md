@@ -24,9 +24,13 @@ Analysis: GRC shieldsUP confirmed that the two ports are Filtered.
 Conclusion: The initial "Open" ports were False Positives caused by the mobile carrier's network architecture. The router is correctly dropping all unsolicited external traffic (Stealth Mode).
 # 3. Phase 2: Internal Service Discovery
 I performed a deep scan of the router from within the network to identify which services are available to local users.
+
 Command: sudo nmap -sS -sU -Pn 192.168.1.1
+
 Duration: 998.93 seconds seconds (approx. 16 minutes)
-Result: [INSERT YOUR LAST NMAP SCREENSHOT HERE]
+
+![internal scan](/Routers-security-reports/Netis%20WF2409E/images/internal_ports_scan.png)
+
 Findings:
 Port 53 (TCP/UDP): DNS Domain service is active for local name resolution.
 Port 80 (TCP): HTTP Web Management interface is active.
