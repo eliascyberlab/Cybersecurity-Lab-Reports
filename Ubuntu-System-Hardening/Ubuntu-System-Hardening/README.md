@@ -20,6 +20,6 @@ Disable the service: sudo systemctl disable cups
 
 After performing the hardening steps, I re-ran the security scan to confirm the service was no longer active.
 Result: The verification scan confirms that the system no longer listens on port 631, successfully reducing the VM's attack surface.
-
+![Final Scan](../images/final_scan.png)
 # 5. Conclusion
 This exercise demonstrates the importance of Attack Surface Reduction. By identifying and disabling unused services, I reduced the system's vulnerability to known RCE exploits. This proactive approach is a foundational step in maintaining a hardened and secure computing environment.
