@@ -2,7 +2,7 @@ Lab Report: Home Router Security Audit & Verification
 Analyst: Elias Zgheib
 
 Date: February 14, 2026
-Target Hardware: Netis Wireless Router (Internal IP: 192.168.1.1)
+Target Hardware: Netis WF2409E Router (Internal IP: 192.168.1.1)
 # 1. Objective
 To perform a comprehensive security audit of the home gateway, verify external "stealth" status, and identify any unnecessary internal services that could increase the local attack surface.
 # 2. Phase 1: External Auditing & False Positive Analysis
