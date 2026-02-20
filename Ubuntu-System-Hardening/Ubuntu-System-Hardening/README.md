@@ -11,6 +11,8 @@ I used the ss (socket statistics) tool to inspect all active and listening netwo
 Finding: The output revealed cupsd (Common Unix Printing System) listening on port 631.
 Risk Assessment: CUPS has been associated with critical vulnerabilities, such as CVE-2024-47176, which could allow unauthenticated attackers to execute commands remotely. Keeping this service active provides an unnecessary entry point for an attacker.
 
+![Socket statistics tool](../images/ss first scan.png ss first scan.png)
+
 # 3. Remediation (Hardening Steps)
 To secure the system, I executed the following commands to stop the service immediately and prevent it from starting during future reboots:
 Stop the service: sudo systemctl stop cups
