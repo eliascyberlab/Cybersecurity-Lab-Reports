@@ -41,7 +41,6 @@ Tools used: Nmap online port scanner at hackertarget.com
 
 ![Nmap online port scanner](/Routers-security-reports/Netis%20WF2409E/images/hackertarget_nmap_scan.png)
 
-Backdoor Check: I specifically checked for known Netis backdoors (e.g., UDP 53413). The scan confirmed this port is not active, indicating a more secure firmware version or configuration.
 UDP Stealth: The 16-minute scan duration confirms the router's firewall is effectively "ignoring" probes rather than rejecting them, making reconnaissance more difficult for a local attacker.
 # 5. Final Conclusion
 The Netis router is currently in a Hardened State. It successfully masks its presence from the public internet (WAN) while providing only essential services (DNS and Web Admin) to the local network (LAN). No critical vulnerabilities or unauthorized listening services were discovered during this audit.
