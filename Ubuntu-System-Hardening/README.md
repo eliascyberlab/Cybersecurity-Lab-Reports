@@ -1,7 +1,7 @@
 Lab Report: Ubuntu System Hardening & Attack Surface Reduction
 Date: February 14, 2026
 
-Analyst: Elias Zgheib
+Analyst: Elias Zgheib 
 Objective: Perform a baseline security audit of an Ubuntu 64-bit VM and reduce the attack surface by disabling non-essential services.
 
 # 1. Executive Summary
