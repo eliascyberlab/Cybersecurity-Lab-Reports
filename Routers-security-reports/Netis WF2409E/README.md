@@ -15,6 +15,7 @@ I thought to verify these results using a neutral third-party source.
 Tools Used: GRC ShieldsUP!
 
 ![GRC port 21](/Routers-security-reports/Netis%20WF2409E/images/port21_grc_passed.png)
+![GRC port 5060](/Routers-security-reports/Netis%20WF2409E/images/grc_port5060_passed.png)
 
 Analysis: GRC shieldsUP confirmed that the two ports are Filtered.
 Conclusion: The initial "Open" ports were False Positives caused by the mobile carrier's network architecture. The router is correctly dropping all unsolicited external traffic (Stealth Mode).
