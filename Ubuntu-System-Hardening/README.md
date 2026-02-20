@@ -16,6 +16,7 @@ Risk Assessment: CUPS has been associated with critical vulnerabilities, such as
 # 3. Remediation (Hardening Steps)
 To secure the system, I executed the following commands to stop the service immediately and prevent it from starting during future reboots:
 Stop the service: sudo systemctl stop cups
+
 Disable the service: sudo systemctl disable cups
 
 ![Commands Used](/Ubuntu-System-Hardening/images/hardening_with_commands.png)
