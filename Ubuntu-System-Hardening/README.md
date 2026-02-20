@@ -18,7 +18,7 @@ To secure the system, I executed the following commands to stop the service imme
 Stop the service: sudo systemctl stop cups
 Disable the service: sudo systemctl disable cups
 
-![Commands Used](../images/hardening_with_commands.png)
+![Commands Used](/Ubuntu-System-Hardening/images/hardening_with_commands.png)
 
 # 4. Verification & Results
 
