@@ -13,8 +13,10 @@ During initial testing using a mobile hotspot and nmap, two ports (21,5060) appe
 
 I thought to verify these results using a neutral third-party source.
 Tools Used: GRC ShieldsUP!
-
+Port 21
 ![GRC port 21](/Routers-security-reports/Netis%20WF2409E/images/port21_grc_passed.png)
+
+Port 5060
 ![GRC port 5060](/Routers-security-reports/Netis%20WF2409E/images/grc_port5060_passed.png)
 
 Analysis: GRC shieldsUP confirmed that the two ports are Filtered.
