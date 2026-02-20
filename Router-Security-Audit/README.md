@@ -1,5 +1,6 @@
 Lab Report: Home Router Security Audit & Verification
 Analyst: Elias Zgheib
+
 Date: February 14, 2026
 Target Hardware: Netis Wireless Router (Internal IP: 192.168.1.1)
 # 1. Objective
