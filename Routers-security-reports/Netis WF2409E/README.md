@@ -47,9 +47,11 @@ Demonstration of the administrative password update interface on a Netis WF2409E
 ![Strong Password](/Routers-security-reports/Netis%20WF2409E/images/setting_new_strong_password.png)
 
 
+
 Backdoor Check: I specifically checked for known Netis backdoors (e.g., UDP 53413). The scan confirmed this port is not active, indicating a more secure firmware version or configuration.
 
 
+![UDP port](/Routers-security-reports/Netis%20WF2409E/images/UDP_port_53413.png)
 
 UDP Stealth: The 16-minute scan duration confirms the router's firewall is effectively "ignoring" probes rather than rejecting them, making reconnaissance more difficult for a local attacker.
 UDP Stealth: The 16-minute scan duration confirms the router's firewall is effectively "ignoring" probes rather than rejecting them, making reconnaissance more difficult for a local attacker.
