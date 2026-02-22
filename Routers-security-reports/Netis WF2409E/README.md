@@ -40,11 +40,16 @@ Management Interface: While Port 80 is open internally, i used another neutral t
 Tools used: Nmap online port scanner at hackertarget.com
 
 ![Nmap online port scanner](/Routers-security-reports/Netis%20WF2409E/images/hackertarget_nmap_scan.png)
+
 I verified that a strong, non-default administrative password is required to access this interface.
 Demonstration of the administrative password update interface on a Netis WF2409E. Strong, non-default credentials have been applied to secure the management gateway. (Sensitive data permanently redacted for security)."
 
+![Strong Password](/Routers-security-reports/Netis%20WF2409E/images/setting_new_strong_password.png)
+
 
 Backdoor Check: I specifically checked for known Netis backdoors (e.g., UDP 53413). The scan confirmed this port is not active, indicating a more secure firmware version or configuration.
+
+
 
 UDP Stealth: The 16-minute scan duration confirms the router's firewall is effectively "ignoring" probes rather than rejecting them, making reconnaissance more difficult for a local attacker.
 UDP Stealth: The 16-minute scan duration confirms the router's firewall is effectively "ignoring" probes rather than rejecting them, making reconnaissance more difficult for a local attacker.
