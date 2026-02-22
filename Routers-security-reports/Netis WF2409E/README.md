@@ -14,10 +14,10 @@ During initial testing using a mobile hotspot and nmap, two ports (21,5060) appe
 I thought to verify these results using a neutral third-party source.
 Tools Used: GRC ShieldsUP!
 
-Port 21
+A. Port 21
 ![GRC port 21](/Routers-security-reports/Netis%20WF2409E/images/port21_grc_passed.png)
 
-Port 5060
+B. Port 5060
 ![GRC port 5060](/Routers-security-reports/Netis%20WF2409E/images/grc_port5060_passed.png)
 
 Analysis: GRC shieldsUP confirmed that the two ports are Filtered.
@@ -35,25 +35,27 @@ Findings:
 Port 53 (TCP/UDP): DNS Domain service is active for local name resolution.
 Port 80 (TCP): HTTP Web Management interface is active.
 # 4. Risk Assessment & Hardening
-Management Interface: While Port 80 is open internally, i used another neutral third-party source to check if it is Filtered externally.
+A. Management Interface: While Port 80 is open internally, i used another neutral third-party source to check if it is Filtered externally.
 
 Tools used: Nmap online port scanner at hackertarget.com
 
 ![Nmap online port scanner](/Routers-security-reports/Netis%20WF2409E/images/hackertarget_nmap_scan.png)
 
-I verified that a strong, non-default administrative password is required to access this interface.
+
+B. I verified that a strong, non-default administrative password is required to access this interface.
 Demonstration of the administrative password update interface on a Netis WF2409E. Strong, non-default credentials have been applied to secure the management gateway. (Sensitive data permanently redacted for security)."
 
 ![Strong Password](/Routers-security-reports/Netis%20WF2409E/images/setting_new_strong_password.png)
 
 
 
-Backdoor Check: I specifically checked for known Netis backdoors (e.g., UDP 53413). The scan confirmed this port is not active, indicating a more secure firmware version or configuration.
+
+C. Backdoor Check: I specifically checked for known Netis backdoors (e.g., UDP 53413). The scan confirmed this port is not active, indicating a more secure firmware version or configuration.
 
 
 ![UDP port](/Routers-security-reports/Netis%20WF2409E/images/UDP_port_53413.png)
 
-UDP Stealth: The 16-minute scan duration confirms the router's firewall is effectively "ignoring" probes rather than rejecting them, making reconnaissance more difficult for a local attacker.
-UDP Stealth: The 16-minute scan duration confirms the router's firewall is effectively "ignoring" probes rather than rejecting them, making reconnaissance more difficult for a local attacker.
+D. UDP Stealth: The 16-minute scan duration confirms the router's firewall is effectively "ignoring" probes rather than rejecting them, making reconnaissance more difficult for a local attacker.
+
 # 5. Final Conclusion
 The Netis router is currently in a Hardened State. It successfully masks its presence from the public internet (WAN) while providing only essential services (DNS and Web Admin) to the local network (LAN). No critical vulnerabilities or unauthorized listening services were discovered during this audit.
