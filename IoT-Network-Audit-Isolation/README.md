@@ -30,11 +30,11 @@ With the IP confirmed via passive sniffing, I used Nmap to find the local contro
 The Command:
 
 
-sudo nmap -sS -Pn -p 6668 192.168.0.101
+sudo nmap -sS sU -Pn -T4 192.168.0.101
 The Finding:
-Nmap confirmed TCP Port 6668 was open. This is the local control port used by the Smart Life app for encrypted Command & Control (C2) handshakes.
+Nmap confirmed Port 6668/tcp and port 49154/udp were open. port 6668/tcp is the local control port used by the Smart Life app for encrypted Command & Control (C2) handshakes, and port 49154/udp is used by the Chinese wireless heater switch to "shout" its presence to the network
 
-[INSERT SCREENSHOT 3]: Nmap output showing Port 6668 as "Open."
+![open ports](/IoT-Network-Audit-Isolation/images/Nmap_output_scan.png)
 
 # 4. Phase 3: Security Remediation (Network Segmentation)
 Leaving an unverified IoT device on a primary LAN allows for Lateral Movement. If the device's cloud server is compromised, an attacker could jump from the heater to my personal workstation.
