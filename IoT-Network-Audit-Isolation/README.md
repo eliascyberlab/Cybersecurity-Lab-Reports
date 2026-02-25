@@ -48,7 +48,7 @@ Allow Guests to Access My Local Network: Disabled.
 
 Guest Network Isolation: Enabled (Prevents the heater from communicating with other guest devices).
 
-[INSERT SCREENSHOT 4]: TP-Link "Guest Network" settings page showing these options disabled/enabled.
+![guest settings](/IoT-Network-Audit-Isolation/images/TP-Link_Guest_Network_settings.png)
 
 # 5. Final Verification (Proving the Sandbox)
 To verify the segmentation, I attempted to scan the heater's new IP from my main Ubuntu VM on the primary LAN.
