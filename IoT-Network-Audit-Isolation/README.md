@@ -1,7 +1,8 @@
 Lab Report: IoT Network Discovery & Isolation Audit
 
 Analyst: Elias Zgheib
-Date:25/02/2026
+
+Date: February 25/2026
 
 # 1. Objective:
 The "Invisible" Device
