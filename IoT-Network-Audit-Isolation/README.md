@@ -53,7 +53,7 @@ Guest Network Isolation: Enabled (Prevents the heater from communicating with ot
 ![guest settings](/IoT-Network-Audit-Isolation/images/TP-Link_Guest_Network_settings.png)
 
 # 5. Final Verification (Proving the Sandbox)
-To verify the segmentation, I attempted to scan the heater's new IP from my main Ubuntu VM on the primary LAN.
+To verify the segmentation, A verification scan was performed for the Chinese wireless heater switch`s new IP from my main Ubuntu VM on the primary LAN.
 
 The Result:
 Nmap reported "Host seems down." Even though the heater remained fully functional via the Smart Life app (through the cloud), it could no longer "see" or be "seen" by my private devices. The network is now successfully segmented.
