@@ -1,4 +1,5 @@
-Project: IoT Network Discovery & Isolation Audit
+Lab Report: IoT Network Discovery & Isolation Audit
+
 
 1. The Challenge: The "Invisible" Device
 I added a Chinese wireless heater switch (Tuya-based) to my home network. While it functioned in the Smart Life app, it was invisible to the router’s basic device list and standard Nmap scans. In a cybersecurity context, a hidden device is a "black box" that could be a pivot point for attackers.
