@@ -21,7 +21,8 @@ Technical Note: This indicates the use of the Tuya "Pegasus" Discovery Protocol,
 The Command:
 
 sudo tcpdump -i any udp port 49154 -vv
-[INSERT SCREENSHOT 2]: Terminal screenshot showing the UDP 49154 packets flowing from IP 192.168.0.101.
+
+![port 49154 udp](/IoT-Network-Audit-Isolation/images/UDP_49154_packets.png)
 
 # 3. Phase 2: Active Scanning (Mapping the Attack Surface)
 With the IP confirmed via passive sniffing, I used Nmap to find the local control ports. I bypassed the "ping" check (-Pn) to force a scan of the stealthed host.
