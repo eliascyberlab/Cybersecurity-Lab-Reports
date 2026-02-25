@@ -31,7 +31,9 @@ The Command:
 
 
 sudo nmap -sS sU -Pn -T4 192.168.0.101
+
 The Finding:
+
 Nmap confirmed Port 6668/tcp and port 49154/udp were open. port 6668/tcp is the local control port used by the Smart Life app for encrypted Command & Control (C2) handshakes, and port 49154/udp is used by the Chinese wireless heater switch to "shout" its presence to the network
 
 ![open ports](/IoT-Network-Audit-Isolation/images/Nmap_output_scan.png)
