@@ -2,13 +2,13 @@ Lab Report: IoT Network Discovery & Isolation Audit
 
 Analyst: Elias Zgheib
 
-1. Objective:
+# 1. Objective:
 The "Invisible" Device
 I added a Chinese wireless heater switch (Tuya-based) to my home network. While it functioned in the Smart Life app, it was invisible to the router’s basic device list and standard Nmap scans. In a cybersecurity context, a hidden device is a "black box" that could be a pivot point for attackers.
 
 [INSERT SCREENSHOT 1]: Screenshot of your router's "Attached Devices" or DHCP list where the heater is missing or labeled "Unknown."
 
-2. Phase 1: Passive Reconnaissance (The "Listen" Phase)
+# 2. Phase 1: Passive Reconnaissance (The "Listen" Phase)
 Standard ping scans failed because many IoT devices are "stealthed" (ICMP disabled). I used tcpdump on my Linux VM (bridged mode) to listen for broadcast traffic, suspecting the device was "shouting" its presence rather than "listening."
 
 The Discovery
@@ -22,7 +22,7 @@ Bash
 sudo tcpdump -i any udp port 49154 -vv
 [INSERT SCREENSHOT 2]: Terminal screenshot showing the UDP 49154 packets flowing from IP 192.168.0.101.
 
-3. Phase 2: Active Scanning (Mapping the Attack Surface)
+# 3. Phase 2: Active Scanning (Mapping the Attack Surface)
 With the IP confirmed via passive sniffing, I used Nmap to find the local control ports. I bypassed the "ping" check (-Pn) to force a scan of the stealthed host.
 
 The Command:
@@ -34,7 +34,7 @@ Nmap confirmed TCP Port 6668 was open. This is the local control port used by th
 
 [INSERT SCREENSHOT 3]: Nmap output showing Port 6668 as "Open."
 
-4. Phase 3: Security Remediation (Network Segmentation)
+# 4. Phase 3: Security Remediation (Network Segmentation)
 Leaving an unverified IoT device on a primary LAN allows for Lateral Movement. If the device's cloud server is compromised, an attacker could jump from the heater to my personal workstation.
 
 The Solution: The "Sandbox"
@@ -48,13 +48,13 @@ Guest Network Isolation: Enabled (Prevents the heater from communicating with ot
 
 [INSERT SCREENSHOT 4]: TP-Link "Guest Network" settings page showing these options disabled/enabled.
 
-5. Final Verification (Proving the Sandbox)
+# 5. Final Verification (Proving the Sandbox)
 To verify the segmentation, I attempted to scan the heater's new IP from my main Ubuntu VM on the primary LAN.
 
 The Result:
 Nmap reported "Host seems down." Even though the heater remained fully functional via the Smart Life app (through the cloud), it could no longer "see" or be "seen" by my private devices. The network is now successfully segmented.
 
-6. Tools & Skills Demonstrated
+# 6. Tools & Skills Demonstrated
 OS: Ubuntu (VMware Workstation)
 
 Network Sniffing: tcpdump (Passive discovery)
@@ -64,3 +64,8 @@ Security Scanning: nmap (Service enumeration)
 Architecture: Network Segmentation & VLAN-style isolation
 
 Protocols: Tuya/Smart Life (UDP 49154, TCP 6668)
+
+# 7. final conclusion
+   The "invisible" heater was a perfect example of how IoT devices can create hidden blind spots in a network. By using passive sniffing and targeted scanning, I was able to unmask a device that didn't want to be found.
+
+The successful isolation of this device proves that you don't need expensive enterprise gear to secure a network—you just need the right methodology. My home network is now safer, and the "blast radius" of this IoT device is officially contained.
