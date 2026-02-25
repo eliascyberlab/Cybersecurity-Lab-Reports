@@ -1,11 +1,10 @@
 Lab Report: Ubuntu System Hardening & Attack Surface Reduction
-Date: February 14, 2026
 
 Analyst: Elias Zgheib 
 
-Objective: Perform a baseline security audit of an Ubuntu 64-bit VM and reduce the attack surface by disabling non-essential services.
+Date: February 14, 2026
 
-# 1. Executive Summary
+# 1.Objective
 During a routine security audit of a newly deployed Ubuntu VM, I identified an active print-related service (cupsd) listening on a network port. Given that this VM is a dedicated cybersecurity lab environment, printing capabilities are unnecessary. To align with the Principle of Least Privilege, I successfully neutralized this service to mitigate potential remote code execution (RCE) risks.
 
 # 2. Methodology & Discovery
