@@ -18,7 +18,6 @@ Technical Note: This indicates the use of the Tuya "Pegasus" Discovery Protocol,
 
 The Command:
 
-Bash
 sudo tcpdump -i any udp port 49154 -vv
 [INSERT SCREENSHOT 2]: Terminal screenshot showing the UDP 49154 packets flowing from IP 192.168.0.101.
 
@@ -27,7 +26,7 @@ With the IP confirmed via passive sniffing, I used Nmap to find the local contro
 
 The Command:
 
-Bash
+
 sudo nmap -sS -Pn -p 6668 192.168.0.101
 The Finding:
 Nmap confirmed TCP Port 6668 was open. This is the local control port used by the Smart Life app for encrypted Command & Control (C2) handshakes.
@@ -38,7 +37,7 @@ Nmap confirmed TCP Port 6668 was open. This is the local control port used by th
 Leaving an unverified IoT device on a primary LAN allows for Lateral Movement. If the device's cloud server is compromised, an attacker could jump from the heater to my personal workstation.
 
 The Solution: The "Sandbox"
-I used my TP-Link Archer C20 to create an isolated Guest Network.
+I used my TP-Link Archer C20 ac750 to create an isolated Guest Network.
 
 Hardening Steps:
 
@@ -66,6 +65,5 @@ Architecture: Network Segmentation & VLAN-style isolation
 Protocols: Tuya/Smart Life (UDP 49154, TCP 6668)
 
 # 7. final conclusion
-   The "invisible" heater was a perfect example of how IoT devices can create hidden blind spots in a network. By using passive sniffing and targeted scanning, I was able to unmask a device that didn't want to be found.
-
+The "invisible" heater was a perfect example of how IoT devices can create hidden blind spots in a network. By using passive sniffing and targeted scanning, I was able to unmask a device that didn't want to be found.
 The successful isolation of this device proves that you don't need expensive enterprise gear to secure a network—you just need the right methodology. My home network is now safer, and the "blast radius" of this IoT device is officially contained.
