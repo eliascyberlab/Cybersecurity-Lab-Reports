@@ -53,17 +53,8 @@ To verify the segmentation, I attempted to scan the heater's new IP from my main
 The Result:
 Nmap reported "Host seems down." Even though the heater remained fully functional via the Smart Life app (through the cloud), it could no longer "see" or be "seen" by my private devices. The network is now successfully segmented.
 
-# 6. Tools & Skills Demonstrated
-OS: Ubuntu (VMware Workstation)
 
-Network Sniffing: tcpdump (Passive discovery)
 
-Security Scanning: nmap (Service enumeration)
-
-Architecture: Network Segmentation & VLAN-style isolation
-
-Protocols: Tuya/Smart Life (UDP 49154, TCP 6668)
-
-# 7. final conclusion
+# 6. final conclusion
 The "invisible" heater was a perfect example of how IoT devices can create hidden blind spots in a network. By using passive sniffing and targeted scanning, I was able to unmask a device that didn't want to be found.
 The successful isolation of this device proves that you don't need expensive enterprise gear to secure a network—you just need the right methodology. My home network is now safer, and the "blast radius" of this IoT device is officially contained.
