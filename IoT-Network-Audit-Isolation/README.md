@@ -1,1 +1,63 @@
+Project: IoT Network Discovery & Isolation Audit
 
+1. The Challenge: The "Invisible" Device
+I added a Chinese wireless heater switch (Tuya-based) to my home network. While it functioned in the Smart Life app, it was invisible to the router’s basic device list and standard Nmap scans. In a cybersecurity context, a hidden device is a "black box" that could be a pivot point for attackers.
+
+[INSERT SCREENSHOT 1]: Screenshot of your router's "Attached Devices" or DHCP list where the heater is missing or labeled "Unknown."
+
+2. Phase 1: Passive Reconnaissance (The "Listen" Phase)
+Standard ping scans failed because many IoT devices are "stealthed" (ICMP disabled). I used tcpdump on my Linux VM (bridged mode) to listen for broadcast traffic, suspecting the device was "shouting" its presence rather than "listening."
+
+The Discovery
+Almost immediately, I captured a heartbeat packet. While common Tuya documentation suggests Port 6667, my device was broadcasting on UDP Port 49154.
+
+Technical Note: This indicates the use of the Tuya "Pegasus" Discovery Protocol, which utilizes the dynamic port range (49152+) for high-speed device pairing and synchronization.
+
+The Command:
+
+Bash
+sudo tcpdump -i any udp port 49154 -vv
+[INSERT SCREENSHOT 2]: Terminal screenshot showing the UDP 49154 packets flowing from IP 192.168.0.101.
+
+3. Phase 2: Active Scanning (Mapping the Attack Surface)
+With the IP confirmed via passive sniffing, I used Nmap to find the local control ports. I bypassed the "ping" check (-Pn) to force a scan of the stealthed host.
+
+The Command:
+
+Bash
+sudo nmap -sS -Pn -p 6668 192.168.0.101
+The Finding:
+Nmap confirmed TCP Port 6668 was open. This is the local control port used by the Smart Life app for encrypted Command & Control (C2) handshakes.
+
+[INSERT SCREENSHOT 3]: Nmap output showing Port 6668 as "Open."
+
+4. Phase 3: Security Remediation (Network Segmentation)
+Leaving an unverified IoT device on a primary LAN allows for Lateral Movement. If the device's cloud server is compromised, an attacker could jump from the heater to my personal workstation.
+
+The Solution: The "Sandbox"
+I used my TP-Link Archer C20 to create an isolated Guest Network.
+
+Hardening Steps:
+
+Allow Guests to Access My Local Network: Disabled.
+
+Guest Network Isolation: Enabled (Prevents the heater from communicating with other guest devices).
+
+[INSERT SCREENSHOT 4]: TP-Link "Guest Network" settings page showing these options disabled/enabled.
+
+5. Final Verification (Proving the Sandbox)
+To verify the segmentation, I attempted to scan the heater's new IP from my main Ubuntu VM on the primary LAN.
+
+The Result:
+Nmap reported "Host seems down." Even though the heater remained fully functional via the Smart Life app (through the cloud), it could no longer "see" or be "seen" by my private devices. The network is now successfully segmented.
+
+6. Tools & Skills Demonstrated
+OS: Ubuntu (VMware Workstation)
+
+Network Sniffing: tcpdump (Passive discovery)
+
+Security Scanning: nmap (Service enumeration)
+
+Architecture: Network Segmentation & VLAN-style isolation
+
+Protocols: Tuya/Smart Life (UDP 49154, TCP 6668)
