@@ -62,4 +62,4 @@ Nmap reported "Host seems down." Even though the heater remained fully functiona
 
 # 6. final conclusion
 The "invisible"  Chinese wireless heater switch was a perfect example of how IoT devices can create hidden blind spots in a network. By using passive sniffing and targeted scanning, I was able to unmask a device that didn't want to be found.
-The successful isolation of this device proves that you don't need expensive enterprise gear to secure a network—you just need the right methodology. My home network is now safer, and the "blast radius" of this IoT device is officially contained.
+The successful isolation of this device proves that you don't need expensive enterprise gear to secure a network—you just need the right methodology. My home network is now safer, and the "blast radius" of this IoT device is officially contained. Periodic audits should be conducted to ensure new IoT devices do not bypass the guest isolation
