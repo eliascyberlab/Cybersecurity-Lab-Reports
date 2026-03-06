@@ -29,7 +29,7 @@ Command: sudo nmap -sS -sU -Pn 192.168.1.1
 
 Duration: 998.93 seconds seconds (approx. 16 minutes)
 
-![internal scan](/Routers-security-reports/Netis%20WF2409E/images/internal_ports_scan.png)
+![internal scan](/Routers-security-reports/Netis%20WF2409E/images/internal_ports%20scan.png)
 
 Findings:
 Port 53 (TCP/UDP): DNS Domain service is active for local name resolution.
