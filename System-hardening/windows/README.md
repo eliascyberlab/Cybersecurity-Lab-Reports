@@ -19,7 +19,7 @@ Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, RemoteAddress, Rem
 
 Upon executing this command, I identified several high-risk active listeners and background services that were not required for my current operations:
 
-a. Print Spooler (spoolsv): Active on Port 10565.
+a. Print Spooler (spoolsv): Active on Port 28170.
 
 Risk assessment: The Print Spooler has a history of critical vulnerabilities, most notably PrintNightmare (CVE-2021-34527), which allows remote authenticated attackers to execute arbitrary code with SYSTEM privileges.
 
