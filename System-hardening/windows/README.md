@@ -21,9 +21,16 @@ Upon executing this command, I identified several high-risk active listeners and
 
 a. Print Spooler (spoolsv): Active on Port 10565.
 
+Risk assessment: The Print Spooler has a history of critical vulnerabilities, most notably PrintNightmare (CVE-2021-34527), which allows remote authenticated attackers to execute arbitrary code with SYSTEM privileges.
+
 b. SMB Server (System): Active on Port 445.
 
+Risk assessment: Ransomware (like WannaCry) uses SMB vulnerabilities to encrypt files not just on the infected machine, but on every reachable server and workstation on the network.
+
 c. Remote Access Tools: AnyDesk and TeamViewer were found running in an "Automatic" persistent state, maintaining listeners on Ports 7070 and 5939.
+
+Risk assessment:
+These tools are designed to be "firewall-friendly," meaning they use outgoing connections to bypass the router's security, and since these services start with Windows, they are always listening. If an attacker gains access to AnyDesk ID or TeamViewer credentials (via password leaks or "brute-forcing"), they can log in whenever they want.
 
 
 
@@ -32,12 +39,10 @@ c. Remote Access Tools: AnyDesk and TeamViewer were found running in an "Automat
 Based on the findings above, I initiated a hardening phase to terminate these listeners and close potential entry points for attackers.
 A. Legacy Service Mitigation (Print & File Sharing)
 Action: Terminated and Disabled the Print Spooler and Server (LANMAN) services.
-Reasoning:
-Spooler: Mitigates risks associated with "PrintNightmare" style vulnerabilities (CVE-2021-34527).
-SMB (Port 445): Prevents unauthorized lateral movement and file discovery on the local network—a primary vector for ransomware.
+
 B. Remote Access Tool (RAT) Hardening
 Action: Transitioned AnyDesk and TeamViewer startup types from "Automatic" to Manual via services.msc.
-Reasoning: Ensures these tools only run when explicitly launched by the user, preventing unauthorized background access and reducing persistent listening ports.
+
 [INSERT SCREENSHOT 1 HERE]
 Caption: Initial PowerShell scan identifying active Spooler (10565) and SMB (445) listeners before hardening actions were applied.
 3. Process Integrity Audit: svchost.exe & explorer.exe
