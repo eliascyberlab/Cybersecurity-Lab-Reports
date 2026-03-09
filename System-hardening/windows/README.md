@@ -18,11 +18,13 @@ powershell
 Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, RemoteAddress, RemotePort, State, @{Name="ProcessName";Expression={(Get-Process -Id $_.OwningProcess).ProcessName}} | Format-Table -AutoSize
 
 Upon executing this command, I identified several high-risk active listeners and background services that were not required for my current operations:
-Print Spooler (spoolsv): Active on Port 10565.
-SMB Server (System): Active on Port 445.
-Remote Access Tools: AnyDesk and TeamViewer were found running in an "Automatic" persistent state, maintaining listeners on Ports 7070 and 5939.
+a. Print Spooler (spoolsv): Active on Port 10565.
+b. SMB Server (System): Active on Port 445.
+c. Remote Access Tools: AnyDesk and TeamViewer were found running in an "Automatic" persistent state, maintaining listeners on Ports 7070 and 5939.
 
-2. Attack Surface Reduction (Hardening)
+
+
+# 3. Remediation (Hardening Steps)
 Based on the findings above, I initiated a hardening phase to terminate these listeners and close potential entry points for attackers.
 A. Legacy Service Mitigation (Print & File Sharing)
 Action: Terminated and Disabled the Print Spooler and Server (LANMAN) services.
