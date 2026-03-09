@@ -6,14 +6,16 @@ Environment: Windows 10 (Home Lab)
 
 # 1 Objective:
 Identify active network listeners, verify system process integrity, and reduce the attack surface by disabling unnecessary services.
-1. Methodology: Network Service Discovery
-To begin the audit, I utilized a customized PowerShell command to map active network connections directly to their owning processes. This provides a level of visibility beyond standard tools by identifying exactly which application is "listening" on which port.
-Command Used:
-powershell
-Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, RemoteAddress, RemotePort, State, @{Name="ProcessName";Expression={(Get-Process -Id $_.OwningProcess).ProcessName}} | Format-Table -AutoSize
 
 
 # 2. Methodology & Discovery
+
+I utilized a customized PowerShell command to map active network connections directly to their owning processes. This provides a level of visibility beyond standard tools by identifying exactly which application is "listening" on which port.
+
+Command Used:
+
+powershell
+Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, RemoteAddress, RemotePort, State, @{Name="ProcessName";Expression={(Get-Process -Id $_.OwningProcess).ProcessName}} | Format-Table -AutoSize
 
 Upon executing this command, I identified several high-risk active listeners and background services that were not required for my current operations:
 Print Spooler (spoolsv): Active on Port 10565.
