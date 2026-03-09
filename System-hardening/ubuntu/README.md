@@ -20,7 +20,7 @@ Stop the service: sudo systemctl stop cups
 
 Disable the service: sudo systemctl disable cups
 
-![Commands Used](/Ubuntu-System-Hardening/images/hardening_with_commands.png)
+![Commands Used](/System-hardening/ubuntu/images/hardening_with_commands.png)
 
 # 4. Verification & Results
 
