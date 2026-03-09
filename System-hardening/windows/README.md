@@ -13,7 +13,7 @@ powershell
 Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, RemoteAddress, RemotePort, State, @{Name="ProcessName";Expression={(Get-Process -Id $_.OwningProcess).ProcessName}} | Format-Table -AutoSize
 
 
-Initial Findings
+# 2. Methodology & Discovery
 
 Upon executing this command, I identified several high-risk active listeners and background services that were not required for my current operations:
 Print Spooler (spoolsv): Active on Port 10565.
