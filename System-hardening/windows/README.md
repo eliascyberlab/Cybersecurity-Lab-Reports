@@ -4,7 +4,7 @@ Date: March 8, 2026
 
 Environment: Windows 10 (Home Lab)
 
-#1 Objective:
+# 1 Objective:
 Identify active network listeners, verify system process integrity, and reduce the attack surface by disabling unnecessary services.
 1. Methodology: Network Service Discovery
 To begin the audit, I utilized a customized PowerShell command to map active network connections directly to their owning processes. This provides a level of visibility beyond standard tools by identifying exactly which application is "listening" on which port.
