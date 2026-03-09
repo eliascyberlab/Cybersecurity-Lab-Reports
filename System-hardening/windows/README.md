@@ -18,9 +18,13 @@ powershell
 Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, RemoteAddress, RemotePort, State, @{Name="ProcessName";Expression={(Get-Process -Id $_.OwningProcess).ProcessName}} | Format-Table -AutoSize
 
 Upon executing this command, I identified several high-risk active listeners and background services that were not required for my current operations:
+
 a. Print Spooler (spoolsv): Active on Port 10565.
+
 b. SMB Server (System): Active on Port 445.
+
 c. Remote Access Tools: AnyDesk and TeamViewer were found running in an "Automatic" persistent state, maintaining listeners on Ports 7070 and 5939.
+
 
 
 
