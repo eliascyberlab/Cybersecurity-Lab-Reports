@@ -33,6 +33,8 @@ Based on the findings above, I initiated a hardening phase to terminate these li
 
 B. Remote Access Tool (RAT) Hardening Action: Transitioned AnyDesk and TeamViewer startup types from "Automatic" to Manual via services.msc. Moving RATs to "Manual" breaks persistence. This forces a "Human-in-the-Loop" requirement
 
+[any desk and teamviewer](/System-hardening/windows/images/anydesk_and_teamviewer_manual.png)
+
 Process Integrity Audit: svchost.exe to ensure no malware was masquerading as a legitimate system process, I conducted a deep-dive audit of all active system binaries. svchost.exe (Service Host): I manually audited all active instances. For every instance, I verified the file path (C:\Windows\System32) and the Digital Signature (Microsoft Windows). 100% of instances were confirmed legitimate.
 
 This methodology was applied to every svchost instance on the system. 
