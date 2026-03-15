@@ -28,6 +28,8 @@ c. Remote Access Tools: AnyDesk and TeamViewer were found running in an "Automat
 
 Risk assessment: These tools are designed to be "firewall-friendly," meaning they use outgoing connections to bypass the router's security, and since these services start with Windows, they are always listening. If an attacker gains access to AnyDesk ID or TeamViewer credentials (via password leaks or "brute-forcing"), they can log in whenever they want.
 
+![first scan](/System-hardening/windows/images/powershell_1st_scan.png)
+
 # 3. Remediation (Hardening Steps)
 Based on the findings above, I initiated a hardening phase to terminate these listeners and close potential entry points for attackers. A. Legacy Service Mitigation (Print & File Sharing) Action: Terminated and Disabled the Print Spooler and Server (LANMAN) services.
 
