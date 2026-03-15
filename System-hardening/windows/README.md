@@ -41,6 +41,8 @@ B. Remote Access Tool (RAT) Hardening Action: Transitioned AnyDesk and TeamViewe
 
 Process Integrity Audit: svchost.exe to ensure no malware was masquerading as a legitimate system process, I conducted a deep-dive audit of all active system binaries. svchost.exe (Service Host): I manually audited all active instances. For every instance, I verified the file path (C:\Windows\System32) and the Digital Signature (Microsoft Windows). 100% of instances were confirmed legitimate.
 
+![svchost check](/System-hardening/windows/images/checking_svchost_filelocation.png)
+
 This methodology was applied to every svchost instance on the system. 
 
 # 4. Final Verification
