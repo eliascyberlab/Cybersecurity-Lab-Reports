@@ -1,8 +1,9 @@
+Environment: Windows 10 (Home Lab)
+
 Analyst: Elias Zgheib
 
 Date: March 8, 2026
 
-Environment: Windows 10 (Home Lab)
 
 # 1 Objective:
 Identify active network listeners, verify system process integrity, and reduce the attack surface by disabling unnecessary services to establish a baseline 'Hardened State' for a Windows 10 home lab
