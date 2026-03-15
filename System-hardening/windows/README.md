@@ -33,6 +33,8 @@ Risk assessment: These tools are designed to be "firewall-friendly," meaning the
 # 3. Remediation (Hardening Steps)
 Based on the findings above, I initiated a hardening phase to terminate these listeners and close potential entry points for attackers. A. Legacy Service Mitigation (Print & File Sharing) Action: Terminated and Disabled the Print Spooler and Server (LANMAN) services.
 
+![spooler and server disabled](/System-hardening/windows/images/server_and_spooler_disabled.png)
+
 B. Remote Access Tool (RAT) Hardening Action: Transitioned AnyDesk and TeamViewer startup types from "Automatic" to Manual via services.msc. Moving RATs to "Manual" breaks persistence. This forces a "Human-in-the-Loop" requirement
 
 ![any desk and teamviewer](/System-hardening/windows/images/anydesk_and_teamviewer_manual.png)
