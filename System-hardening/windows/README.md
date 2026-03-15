@@ -1,4 +1,4 @@
-Environment: Windows 10 (Home Lab)
+Lab Report: windows 10 System Hardening & Attack Surface Reduction
 
 Analyst: Elias Zgheib
 
