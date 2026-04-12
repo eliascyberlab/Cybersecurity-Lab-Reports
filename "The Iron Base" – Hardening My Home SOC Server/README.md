@@ -1,4 +1,9 @@
-Introduction
+Lab Report: hardening my Home SOC server
+
+Analyst: Elias Zgheib
+
+Date: April 9 2026
+
 In this project, I transformed an old Toshiba laptop into a dedicated security server. My goal was to create a "headless" Linux environment that is secure by design, using industry-standard hardening techniques before deploying any security monitoring tools.
 
 Step 1: Physical to Headless Conversion
