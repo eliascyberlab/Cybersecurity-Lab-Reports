@@ -8,12 +8,17 @@ Date: April 9,2026
 # Objective
 In this project, I transformed an old Toshiba laptop into a dedicated security server. My goal was to create a "headless" Linux environment that is secure by design, using industry-standard hardening techniques before deploying any security monitoring tools.
 
-Phase:1 Physical to Headless Conversion
+![old-laptop](/"The-Iron-Base"–Hardening-My-Home-SOC-Server/Images/toshiba_ubuntu_server.jpeg)
+
+
+
+# Phase:1 Physical to Headless Conversion
+
 The Goal: Make the server operate like a professional data center node.
 
 I installed Ubuntu Server 24.04 LTS and configured the systemd power management settings, by setting the server to "ignore" the lid switch, I can close the laptop and store it on a shelf while it continues to run 24/7. This maximizes physical space and mimics how real servers are managed remotely.
 
-📸 Post Screenshot 1 here: Your physical photo of the Toshiba laptop setup.
+
 
 # Phase 2: Remote Management (The Secure Bridge)
 The Goal: Establish a secure management connection.
