@@ -24,14 +24,18 @@ I installed Ubuntu Server 24.04 LTS and configured the systemd power management 
 
 
 # Phase 2: Remote Management (The Secure Bridge)
+
+
 The Goal: Establish a secure management connection.
+
 
 I configured OpenSSH and established a remote session from my Kali Linux machine. Managing a server directly from its own keyboard is rare in the professional world. By using SSH, I can manage my infrastructure from anywhere on the network securely.
 
-📸 Post Screenshot 2 here: The screenshot of your Kali terminal showing "Welcome to Ubuntu" after you logged in via SSH.
+
+![ssh-connected](/"The-Iron-Base"–Hardening-My-Home-SOC-Server/Images/connecting_to_server_by_ssh.png)
 
 # Phase 3: Network Hardening (UFW)
-The Goal: Apply the Principle of Least Privilege. I configured the Uncomplicated Firewall (UFW) to a "Default Deny" posture. I explicitly opened only the ports required for SSH (22), SIEM dashboards (443), and security agents (1514/1515). A server should only "speak" when necessary. By blocking all incoming traffic by default, I significantly reduced the attack surface of my home lab.
+The Goal: Apply the Principle of Least Privilege. I configured the Uncomplicated Firewall (UFW) to a "Default Deny" posture. I explicitly opened only the ports required for SSH (22), MySQL (3306), SIEM dashboards (443), and security agents (1514/1515). A server should only "speak" when necessary. By blocking all incoming traffic by default, I significantly reduced the attack surface of my home lab.
 
 📸 Post Screenshot 3 here: The command list where you allowed the specific ports (22, 443, etc.). 📸 Post Screenshot 4 here: The output of sudo ufw status verbose showing the firewall is ACTIVE.
 
