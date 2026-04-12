@@ -1,4 +1,4 @@
-Lab Report: hardening my Home SOC server
+Lab Report: Hardening my Home SOC server
 
 Analyst: Elias Zgheib
 
@@ -35,6 +35,7 @@ I configured the Uncomplicated Firewall (UFW) to a "Default Deny" posture. I exp
 📸 Post Screenshot 4 here: The output of sudo ufw status verbose showing the firewall is ACTIVE.
 
 # Phase 4: Automated Defense (Fail2Ban)
+
 The Goal: Implement automated incident response.
 
 What I did: Installed and initialized Fail2Ban.
@@ -43,7 +44,8 @@ Why: While the firewall blocks closed ports, Fail2Ban protects the open ones. It
 
 📸 Post Screenshot 5 here: The terminal screen showing the successful installation of Fail2Ban.
 
-Summary of Skills Demonstrated:
+# Conclusion
+
 Linux System Administration: Configured system services and power management.
 
 Network Security: Built a custom firewall policy.
