@@ -4,11 +4,12 @@ Analyst: Elias Zgheib
 
 Date: April 9,2026
 
-#1. Objective
+# 1. Objective
 
 In this project, I transformed an old Toshiba laptop into a dedicated security server. My goal was to create a "headless" Linux environment that is secure by design, using industry-standard hardening techniques before deploying any security monitoring tools.
 
-Step 1: Physical to Headless Conversion
+# 2. Phase:1 Physical to Headless Conversion
+
 The Goal: Make the server operate like a professional data center node.
 
 What I did: Installed Ubuntu Server 24.04 LTS and configured the systemd power management settings.
