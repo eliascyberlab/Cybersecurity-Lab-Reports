@@ -19,6 +19,9 @@ The Goal: Make the server operate like a professional data center node.
 I installed Ubuntu Server 24.04 LTS and configured the systemd power management settings, by setting the server to "ignore" the lid switch, I can close the laptop and store it on a shelf while it continues to run 24/7. This maximizes physical space and mimics how real servers are managed remotely.
 
 
+![headless-server](/"The-Iron-Base"–Hardening-My-Home-SOC-Server/Images/configuring_lid_settings.png)
+
+
 
 # Phase 2: Remote Management (The Secure Bridge)
 The Goal: Establish a secure management connection.
