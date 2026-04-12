@@ -1,4 +1,4 @@
-Project: "The Iron Base" – Hardening My Home SOC Server
+Lab report: "The Iron Base" – Hardening My Home SOC Server
 Lab Report: Hardening my Home SOC server
 
 Analyst: Elias Zgheib
