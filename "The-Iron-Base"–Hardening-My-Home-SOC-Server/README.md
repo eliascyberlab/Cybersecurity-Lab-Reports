@@ -1,5 +1,4 @@
 Lab report: "The Iron Base" – Hardening My Home SOC Server
-Lab Report: Hardening my Home SOC server
 
 Analyst: Elias Zgheib
 
@@ -46,15 +45,17 @@ I explicitly opened only the ports required for SSH (22), MySQL (3306), SIEM das
 ![ufw](/"The-Iron-Base"–Hardening-My-Home-SOC-Server/Images/firewall_configuration.png)
 
 # Phase 4: Automated Defense (Fail2Ban)
+
+
 The Goal: Implement automated incident response.
 
-What I did: Installed and initialized Fail2Ban.
 
-Why: While the firewall blocks closed ports, Fail2Ban protects the open ones. It monitors system logs for "Brute Force" patterns (like repeated failed logins) and automatically bans the offending IP address. This adds a layer of "intelligence" to my server's defense.
+Installed and initialized Fail2Ban. While the firewall blocks closed ports, Fail2Ban protects the open ones. It monitors system logs for "Brute Force" patterns (like repeated failed logins) and automatically bans the offending IP address. This adds a layer of "intelligence" to my server's defense.
 
-📸 Post Screenshot 5 here: The terminal screen showing the successful installation of Fail2Ban.
+![fail2ban](/"The-Iron-Base"–Hardening-My-Home-SOC-Server/Images/fail2ban_installation.png)
 
 # Conclusion
+
 Linux System Administration: Configured system services and power management.
 
 Network Security: Built a custom firewall policy.
