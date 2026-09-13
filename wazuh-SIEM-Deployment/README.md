@@ -170,7 +170,7 @@ When checking the dashboard for the second Windows laptop, the server flagged ex
 
 To fix this risk, the workstation was logged into directly, the official WinRAR website was accessed, and the application was updated to the secure WinRAR 7.23 release. 
 
-
+![winrar](/wazuh-SIEM-Deployment/images/updating-winrar.png)
 
 This single software update completely patched all 5 security holes, immediately dropping the machine's high-severity threat counter to zero.
 
