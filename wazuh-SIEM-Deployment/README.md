@@ -172,7 +172,10 @@ To fix this risk, the workstation was logged into directly, the official WinRAR 
 
 ![winrar](/wazuh-SIEM-Deployment/images/updating-winrar.png)
 
+
 This single software update completely patched all 5 security holes, immediately dropping the machine's high-severity threat counter to zero.
+
+![win11](/wazuh-SIEM-Deployment/images/win11-vuln-fixed.png)
 
 
 ### 8.2 Securing Device 3: The Kali Auditing Node (kali-cyberlab)
