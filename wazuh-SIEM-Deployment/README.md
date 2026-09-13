@@ -131,6 +131,8 @@ sudo systemctl status wazuh-indexer
 
 From a separate computer on the same network, a web browser successfully connected to the security manager dashboard using the secure web address: https://192.168.1.5.
 
+![dashboard](/wazuh-SIEM-Deployment/images/wazuh-dashboard.png)
+
 
 ## 7. Connecting My Devices (Agent Enrollment)
 
