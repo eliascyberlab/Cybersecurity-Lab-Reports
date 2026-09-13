@@ -157,7 +157,7 @@ The endpoint registration pipeline was then extended to include a specialized Li
 
 
 
-## 8. Vulnerability Detection & Active RemediationWith
+## 8. Vulnerability Detection & Active Remediation With
 
 all three endpoints actively streaming telemetry to the central server, the system's Vulnerability Detector engine began analyzing the lab's attack surface.
 
