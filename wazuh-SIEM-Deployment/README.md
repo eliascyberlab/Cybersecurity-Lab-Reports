@@ -191,7 +191,8 @@ To remediate the vulnerability, a secure SSH shell was opened to the Kali endpoi
 sudo apt update && sudo apt upgrade python3-urllib3 -y
 ```
 
-![Kali Linux Terminal Upgrade Output](image_AqOwQl.png)
+![kali-fix](/wazuh-SIEM-Deployment/images/vuln-kali-fixed.png)
+
 
 Following the patching sequence, a manual baseline assessment refresh was triggered on the manager. The dashboard confirmed that the vulnerability was successfully resolved, bringing all threat counters for the asset back down to a safe zero baseline.
 
