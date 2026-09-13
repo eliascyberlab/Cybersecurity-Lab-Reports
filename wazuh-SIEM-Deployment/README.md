@@ -162,7 +162,17 @@ The endpoint registration pipeline was then extended to include a specialized Li
 all three endpoints actively streaming telemetry to the central server, the system's Vulnerability Detector engine began analyzing the lab's attack surface.
 
 ### 8.1 Cleaning Up Device 2: The Windows Workstation (win11-workstation-02)
-When checking the dashboard for the second Windows laptop, the server flagged exactly 5 High-Severity Vulnerabilities (including CVE-2023-38931 and CVE-2025-8088).The dashboard tracked the root cause down to a single program: an old, unpatched version of WinRAR 6.11 (64-bit).To fix this risk, the workstation was logged into directly, the official WinRAR website was accessed, and the application was updated to the secure WinRAR 7.23 release. This single software update completely patched all 5 security holes, immediately dropping the machine's high-severity threat counter to zero.
+
+When checking the dashboard for the second Windows laptop, the server flagged exactly 5 High-Severity Vulnerabilities (including CVE-2023-38931 and CVE-2025-8088).The dashboard tracked the root cause down to a single program: an old, unpatched version of WinRAR 6.11 (64-bit).
+
+![win11-alert](/wazuh-SIEM-Deployment/images/win11-workstation2-alert.png)
+
+
+To fix this risk, the workstation was logged into directly, the official WinRAR website was accessed, and the application was updated to the secure WinRAR 7.23 release. 
+
+
+
+This single software update completely patched all 5 security holes, immediately dropping the machine's high-severity threat counter to zero.
 
 
 ### 8.2 Securing Device 3: The Kali Auditing Node (kali-cyberlab)
