@@ -19,9 +19,9 @@ Almost immediately, I captured a heartbeat packet. While common Tuya documentati
 Technical Note: This indicates the use of the Tuya "Pegasus" Discovery Protocol, which utilizes the dynamic port range (49152+) for high-speed device pairing and synchronization.
 
 The Command:
-
+```bash
 sudo tcpdump -i any udp port 49154 -vv
-
+```
 ![port 49154 udp](/IoT-Network-Audit-Isolation/images/UDP_49154_packets.png)
 
 # Phase 2: Active Scanning (Mapping the Attack Surface)
@@ -29,8 +29,9 @@ With the IP confirmed via passive sniffing, I used Nmap to find the local contro
 
 The Command:
 
-
+```bash
 sudo nmap -sS sU -Pn -T4 192.168.0.101
+```
 
 The Finding:
 
