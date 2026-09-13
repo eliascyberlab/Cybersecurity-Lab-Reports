@@ -153,6 +153,9 @@ To expand the deployment testing, the exact same process was mirrored to establi
 The endpoint registration pipeline was then extended to include a specialized Linux host running Kali Linux (`kali-cyberlab`). The tracking agent deployment engine was downloaded, updated with the server connection markers, and mapped to `agent.id: 003`. This successfully brought the staging environment infrastructure to three concurrently active and monitored security assets.
 
 
+![agents-connected](/wazuh-SIEM-Deployment/images/agents-connected.png)
+
+
 
 ## 8. Vulnerability Detection & Active RemediationWith
 
