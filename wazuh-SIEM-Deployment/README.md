@@ -111,7 +111,7 @@ The network configuration file was opened for editing:
 ```bash
 sudo nano /etc/netplan/50-cloud-init.yaml
 ```
-
+![fixed-ip](/wazuh-SIEM-Deployment/images/static-ip.png)
 
 
 The dynamic configuration was replaced with manual, unchangeable rules. The server was locked to 192.168.1.5, pointed to the router gateway (192.168.1.1), and given stable backup public DNS servers (Cloudflare 1.1.1.1 and Google 8.8.8.8).
