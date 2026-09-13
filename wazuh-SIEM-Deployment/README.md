@@ -182,7 +182,8 @@ This single software update completely patched all 5 security holes, immediately
 
 When the system scanned the specialized Kali Linux auditing machine, the central console flagged exactly **1 High-Severity Vulnerability** under `agent.id: 003`. The dashboard specifically called out **CVE-2026-44432** and pinpointed the culprit: an outdated Python library package called `urllib3`.
 
-![Wazuh Dashboard Flagging CVE-2026-44432](image_iDZR_o.png)
+![kali-alert](/wazuh-SIEM-Deployment/images/kali-alert.png)
+
 
 To remediate the vulnerability, a secure SSH shell was opened to the Kali endpoint. Running the targeted package update confirmed that **334 system packages** were eligible for upgrades, highlighting how quickly environment components can drift out of date. Executing the patch successfully upgraded the core Python component to a secure version:
 
