@@ -173,7 +173,9 @@ To fix this risk, the workstation was logged into directly, the official WinRAR 
 ![winrar](/wazuh-SIEM-Deployment/images/updating-winrar.png)
 
 
+
 This single software update completely patched all 5 security holes, immediately dropping the machine's high-severity threat counter to zero.
+
 
 ![win11](/wazuh-SIEM-Deployment/images/win11-vuln-fixed.png)
 
@@ -196,9 +198,9 @@ sudo apt update && sudo apt upgrade python3-urllib3 -y
 
 Following the patching sequence, a manual baseline assessment refresh was triggered on the manager. The dashboard confirmed that the vulnerability was successfully resolved, bringing all threat counters for the asset back down to a safe zero baseline.
 
-![Remediated Wazuh Vulnerability Dashboard](image_LvnTRD.png)
 
+![kali-0alerts](/wazuh-SIEM-Deployment/images/kali-vuln-fixed.png)
 
 ## 9. Project Conclusion
 
-This hands-on engineering deployment successfully proves how an isolated SIEM/XDR environment can be designed, hardened, and maintained to protect a diverse, multi-platform network.By mapping out a permanent static network layout and locking down the server firewall, the monitoring core was built to resist unexpected power cuts and network changes. More importantly, discovering the vulnerable WinRAR package on the Windows workstation and the outdated Python library on the Kali node shows the real-world value of this ecosystem. Instead of guessing where security risks are, the system gives defenders immediate visibility, allowing them to catch, track down, and patch network flaws before they can be exploited.
+This hands-on engineering deployment successfully proves how an isolated SIEM/XDR environment can be designed, hardened, and maintained to protect a diverse, multi-platform network. By mapping out a permanent static network layout and locking down the server firewall, the monitoring core was built to resist unexpected power cuts and network changes. More importantly, discovering the vulnerable WinRAR package on the Windows workstation and the outdated Python library on the Kali node shows the real-world value of this ecosystem. Instead of guessing where security risks are, the system gives defenders immediate visibility, allowing them to catch, track down, and patch network flaws before they can be exploited.
