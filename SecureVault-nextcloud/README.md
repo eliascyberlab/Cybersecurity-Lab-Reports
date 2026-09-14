@@ -55,7 +55,9 @@ Access to the Nextcloud interface was tested using Firefox on Kali Linux over HT
 The official Nextcloud application was installed on the iPhone. Connection to ⁠[https://192.168.1.4](https://192.168.1.4)⁠ was established, and credentials were verified without network errors.
  Verification: Successfully authenticated and accessed the Nextcloud file directory on the iOS app.
 
- Suggested Caption: Figure 4: Authenticated Nextcloud mobile app session on iOS.
+ ![nextcloud-iphone](/SecureVault-nextcloud/images/nextcloud-iphone.jpg)
+
+
 ### 6. Traffic & Packet Analysis via Wireshark
 To independently verify transport encryption, a live packet capture was conducted using Wireshark during active file requests and app sync operations.
  Verification: Captured network frames showed all data payloads encapsulated under TLS/SSL protocols. No plaintext HTTP data or sensitive payload content was visible across the network stream.
