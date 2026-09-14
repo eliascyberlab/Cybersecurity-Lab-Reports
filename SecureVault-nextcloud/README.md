@@ -7,8 +7,8 @@ This project covers the full setup and security hardening of a self-hosted Nextc
 ### 1. Nextcloud Server Installation & Initial Account Setup
 The Nextcloud server was deployed on the local machine. During the initial initialization phase, the core administrative user account and password were established to secure management access.
  Configuration: Admin credentials were generated and verified.
- [INSERT SCREENSHOT 1 HERE]
-
+ 
+![username-name](/SecureVault-nextcloud/images/creating-username-and-password.png)
 
  
 ### 2. Server IP & Network Domain Binding
