@@ -61,8 +61,11 @@ The official Nextcloud application was installed on the iPhone. Connection to ‚Å
 ### 6. Traffic & Packet Analysis via Wireshark
 To independently verify transport encryption, a live packet capture was conducted using Wireshark during active file requests and app sync operations.
  Verification: Captured network frames showed all data payloads encapsulated under TLS/SSL protocols. No plaintext HTTP data or sensitive payload content was visible across the network stream.
- [INSERT SCREENSHOT 5 HERE]
- Suggested Caption: Figure 5: Wireshark packet capture confirming encrypted TLS traffic.
+ 
+ Wireshark packet capture confirming encrypted TLS traffic.
+
+ ![wireshark-datapacket](/SecureVault-nextcloud/images/wireshark-datapacket-confirmation.png)
+ 
  
 ### 7. Server-Side Data-at-Rest Encryption
 To protect data at rest against physical drive access or theft, server-side encryption was configured via the Nextcloud administrative settings panel.
