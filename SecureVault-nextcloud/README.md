@@ -37,16 +37,19 @@ To secure traffic in transit and prevent plaintext credential exposure, a TLS ce
 ```bash
 sudo nextcloud.enable-https self-signed
 ```
+TLS certificate generated and applied to web server configuration.
 
 ![TLS-certificate](/SecureVault-nextcloud/images/enabling-TLS-encryption-via-self-signed-certificate.png)
 
-TLS certificate generated and applied to web server configuration.
+
  
 ### 4. Browser Verification (Kali Linux & Firefox)
 Access to the Nextcloud interface was tested using Firefox on Kali Linux over HTTPS (⁠[https://192.168.1.4](https://192.168.1.4)⁠).
  Verification: Logged into the administrator account and verified the security lock icon in the browser URL bar, confirming an encrypted TLS connection.
- [INSERT SCREENSHOT 3 HERE]
- Suggested Caption: Figure 3: Secure browser session with visible TLS lock icon on Kali Linux.
+
+ Secure browser session with visible TLS lock icon on Kali Linux.
+
+ ![dashboard](/SecureVault-nextcloud/images/nextcloud-dashboard.png)
  
 ### 5. Mobile Synchronization (iPhone Integration)
 The official Nextcloud application was installed on the iPhone. Connection to ⁠[https://192.168.1.4](https://192.168.1.4)⁠ was established, and credentials were verified without network errors.
