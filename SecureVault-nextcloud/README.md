@@ -70,8 +70,10 @@ To independently verify transport encryption, a live packet capture was conducte
 ### 7. Server-Side Data-at-Rest Encryption
 To protect data at rest against physical drive access or theft, server-side encryption was configured via the Nextcloud administrative settings panel.
  Configuration: Enabled the Default encryption module under Apps management and toggled Enable server-side encryption under Administration Security settings.
- [INSERT SCREENSHOT 6 HERE] (Use the screenshot you captured from the admin panel)
- Suggested Caption: Figure 6: Server-side encryption enabled in Nextcloud Admin settings.
+
+Server-side encryption enabled in Nextcloud Admin settings.
+
+![server-encryption](/SecureVault-nextcloud/images/encryption-mode-on.png)
  
 ## Conclusion
 This lab successfully implemented, hardened, and verified a self-hosted Nextcloud server environment. By systematically applying security controls at multiple layers, the infrastructure achieves full end-to-end data protection:
