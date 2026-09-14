@@ -6,7 +6,16 @@ This project covers the full setup and security hardening of a self-hosted Nextc
 
 ### 1. Nextcloud Server Installation & Initial Account Setup
 The Nextcloud server was deployed on the local machine. During the initial initialization phase, the core administrative user account and password were established to secure management access.
+
+```bash
+sudo snap install nextcloud
+```
+
  Configuration: Admin credentials were generated and verified.
+
+ ```bash
+sudo nextcloud.manual-install username password
+```
  
 ![username-name](/SecureVault-nextcloud/images/creating-username-and-password.png)
 
@@ -14,6 +23,12 @@ The Nextcloud server was deployed on the local machine. During the initial initi
 ### 2. Server IP & Network Domain Binding
 To allow local network devices to communicate with the instance, the static local IP address of the server (⁠192.168.1.4⁠) was added to the ⁠trusted_domains⁠ array within the Nextcloud ⁠config.php⁠ file.
  Configuration: Bound ⁠192.168.1.4⁠ as a trusted domain to enable internal network routing.
+
+ ```bash
+sudo nextcloud.occ config:system:set trusted_domains 1 --value= ip address
+```
+
+ ![trusted-ip](/SecureVault-nextcloud/images/server's-ipaddress-to-trusted-ip.png)
 
  
 ### 3. TLS Certificate Generation & Web Server Hardening
