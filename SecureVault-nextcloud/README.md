@@ -33,8 +33,14 @@ sudo nextcloud.occ config:system:set trusted_domains 1 --value= ip address
  
 ### 3. TLS Certificate Generation & Web Server Hardening
 To secure traffic in transit and prevent plaintext credential exposure, a TLS certificate was generated and signed on the server. The web server configuration was updated to enforce HTTPS across all incoming connections.
- [INSERT SCREENSHOT 2 HERE]
- Suggested Caption: Figure 2: TLS certificate generated and applied to web server configuration.
+
+```bash
+sudo nextcloud.enable-https self-signed
+```
+
+![TLS-certificate](/SecureVault-nextcloud/images/enabling-TLS-encryption-via-self-signed-certificate.png)
+
+TLS certificate generated and applied to web server configuration.
  
 ### 4. Browser Verification (Kali Linux & Firefox)
 Access to the Nextcloud interface was tested using Firefox on Kali Linux over HTTPS (⁠[https://192.168.1.4](https://192.168.1.4)⁠).
